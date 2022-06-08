@@ -4,10 +4,257 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google font -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style -->
     <link rel="stylesheet" href="style.css" />
-    <title>Hoosh</title>
+    <title>Neural Network</title>
   </head>
   <body>
+    <div class="container">
+      <!-- Form  -->
+      <form class="form">
+        <!-- Single form input -->
+        <div class="form__group">
+          <label for="weight-1">Weight 1: </label>
+          <input type="number" name="weight-1" id="weight-1" />
+        </div>
+        <!-- End of single form input -->
+
+        <!-- Single form input -->
+        <div class="form__group">
+          <label for="weight-2">Weight 2: </label>
+          <input type="number" name="weight-2" id="weight-2" />
+        </div>
+        <!-- End of single form input -->
+
+        <!-- Single form input -->
+        <div class="form__group">
+          <label for="bios">Bios: </label>
+          <input type="number" name="bios" id="bios" />
+        </div>
+        <!-- End of single form input -->
+
+        <!-- Single form input -->
+        <div class="form__group">
+          <label for="learning-rate">Learning rate: </label>
+          <input type="number" name="learning-rate" id="learning-rate" />
+        </div>
+        <!-- End of single form input -->
+
+        <!-- Single form input -->
+        <div class="form__group">
+          <label for="counter">Counter: </label>
+          <input type="number" name="counter" id="counter" />
+        </div>
+        <!-- End of single form input -->
+
+        <!-- Single form input -->
+        <div class="form__groupp radio-button">
+          <ul>
+            <li class="">
+              <input type="radio" name="method" id="and" checked />
+              <label for="and">And</label>
+            </li>
+            <li class="">
+              <input type="radio" name="method" id="or" />
+              <label for="or" class="radio-button--dif">Or</label>
+            </li>
+            <li class="">
+              <input type="radio" name="method" id="nand" />
+              <label for="nand">Nand</label>
+            </li>
+            <li class="">
+              <input type="radio" name="method" id="nor" />
+              <label for="nor" class="radio-button--dif">Nor</label>
+            </li>
+            <li class="">
+              <input type="radio" name="method" id="xor" />
+              <label for="xor">Xor</label>
+            </li>
+          </ul>
+        </div>
+        <!-- End of single form input -->
+
+        <!-- Single form input -->
+        <div class="form__group">
+          <input type="submit" value="Submit" class="submit-btn" />
+        </div>
+        <!-- End of single form input -->
+      </form>
+      <!-- End of Form -->
+
+      <!-- Card table-->
+      <div class="card__container">
+        <!-- Single card -->
+        <div class="card">
+          <div class="card__row card__row--title">
+            <div class="card__cell">[x1,x2]</div>
+            <div class="card__cell">net</div>
+            <div class="card__cell">out</div>
+            <div class="card__cell">target</div>
+            <div class="card__cell">[w1,w2,b]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__number">1</div>
+        </div>
+        <!-- End of single card -->
+        <!-- Single card -->
+        <div class="card">
+          <div class="card__row card__row--title">
+            <div class="card__cell">[x1,x2]</div>
+            <div class="card__cell">net</div>
+            <div class="card__cell">out</div>
+            <div class="card__cell">target</div>
+            <div class="card__cell">[w1,w2,b]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__number">1</div>
+        </div>
+        <!-- End of single card -->
+        <!-- Single card -->
+        <div class="card">
+          <div class="card__row card__row--title">
+            <div class="card__cell">[x1,x2]</div>
+            <div class="card__cell">net</div>
+            <div class="card__cell">out</div>
+            <div class="card__cell">target</div>
+            <div class="card__cell">[w1,w2,b]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__number">1</div>
+        </div>
+        <!-- End of single card -->
+        <!-- Single card -->
+        <div class="card">
+          <div class="card__row card__row--title">
+            <div class="card__cell">[x1,x2]</div>
+            <div class="card__cell">net</div>
+            <div class="card__cell">out</div>
+            <div class="card__cell">target</div>
+            <div class="card__cell">[w1,w2,b]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__row">
+            <div class="card__cell">[1,1]</div>
+            <div class="card__cell">2</div>
+            <div class="card__cell">-1</div>
+            <div class="card__cell">1</div>
+            <div class="card__cell">[1,-1,2]</div>
+          </div>
+          <div class="card__number">100</div>
+        </div>
+        <!-- End of single card -->
+      </div>
+      <!-- End of card table-->
+    </div>
     <script src="app.js" defer></script>
   </body>
 </html>
